@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <h2>Countries</h2>
+    <ul>
+      <li v-for="(country, index) in countries" >
+        <span>{{ country.name }} </span>
+        <span> <img :src="country.flag"></span>
+        <!-- <img id="country-flag" v-if="countriesFlag" :src="countriesFlag" > -->
+        <button v-on:click="addItemToFavourites(index)">Add to Favourties</button>
+    </li>
+    </ul>
+    </div>
+    <h2>Favourites</h2>
+    <div>
+    <ul>
+
+    </ul>
+    </div>
+  </div>
+</body>
+</html>
